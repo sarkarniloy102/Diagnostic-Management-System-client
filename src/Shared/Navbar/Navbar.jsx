@@ -44,7 +44,11 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                <NavLink className="text-lg font-medium" onClick={handleLogOut} >LogOut</NavLink>
+                                <div className="flex items-center">
+                                    <p>{user.email}</p>
+                                    <NavLink className="bg-opacity-25 text-black hover:text-white btn" onClick={handleLogOut} >LogOut</NavLink>
+                                </div>
+
                             </>
                             :
                             <>
